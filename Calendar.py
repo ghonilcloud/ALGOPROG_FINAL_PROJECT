@@ -199,7 +199,7 @@ class CalendarApp:
                 for i in range(1, repeat_weeks + 1):
                     next_week_date = datetime.date(year, month, day) + datetime.timedelta(weeks=i)
                     # If the user inputs 2, then the following 2 weeks will have an event added that matches the exact same description, however it will only be in the next following week.
-                    # This is done by adding the user's choice for the date, but adding an extra week (7 days) onto it.
+                    # This is done by adding the user's choice for the date, but adding an extra weeks onto it by using the timedelta() function.
 
                     # The date of this extra week is then noted and placed into the "next_event" variable, which will then be appended onto the "events" list in __init__
                     # Description will match the previous events, but it will have a "(Repeated)" mark at the end.
